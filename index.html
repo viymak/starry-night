@@ -57,7 +57,7 @@
     			maxBoundsViscosity: 1.0
     		});
 
-    		parseGeoraster("https://raw.githubusercontent.com/viymak/starry-night/master/b1.tif").then(georaster => {
+    		parseGeoraster("https://viymak.github.io/starry-night/b1.tif").then(georaster => {
         		console.log("georaster:", georaster);
 
         		var layer = new GeoRasterLayer({
@@ -71,7 +71,7 @@
 		        layer.addTo(map);
 	        });
 
-	        parseGeoraster("https://raw.githubusercontent.com/viymak/starry-night/master/c1.tif").then(georaster => {
+	        parseGeoraster("https://viymak.github.io/starry-night/c1.tif").then(georaster => {
         		console.log("georaster:", georaster);
 
         		var layer = new GeoRasterLayer({
