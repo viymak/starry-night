@@ -57,7 +57,7 @@
     			maxBoundsViscosity: 1.0
     		});
 
-    		parseGeoraster("http://127.0.0.1:8080/b1.tif").then(georaster => {
+    		parseGeoraster("./b1.tif").then(georaster => {
         		console.log("georaster:", georaster);
 
         		var layer = new GeoRasterLayer({
@@ -71,7 +71,7 @@
 		        layer.addTo(map);
 	        });
 
-	        parseGeoraster("http://127.0.0.1:8080/c1.tif").then(georaster => {
+	        parseGeoraster("./c1.tif").then(georaster => {
         		console.log("georaster:", georaster);
 
         		var layer = new GeoRasterLayer({
