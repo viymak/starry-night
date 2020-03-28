@@ -44,9 +44,18 @@
     			'#bfa604',
     			'#bec075'
     			]).domain([0,50,150,225,255]);
-    		var map = L.map('map').setView([51.57, 4.67], 6);
 
+    		var southWest = L.latLng(0,-90);
+    		var northEast = L.latLng(90,90);
+    		var bounds = L.latLngBounds(southWest, northEast);
 
+    		var map = L.map('map', {
+    			maxBounds: bounds,
+    			center: [51.57, 4.67],
+    			zoom: 6,
+    			minZoom: 4,
+    			maxBoundsViscosity: 1.0
+    		});
 
     		parseGeoraster("http://127.0.0.1:8080/b1.tif").then(georaster => {
         		console.log("georaster:", georaster);
