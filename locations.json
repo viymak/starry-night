@@ -1,0 +1,72 @@
+
+{
+	"Belgium": {
+		"Antwerp": {
+			"coordinates": [51.2194, 4.4025] 
+		},
+		"Borinage": {
+			"coordinates": [50.4333316, 3.83333] 
+		},
+		"Brussels": {
+			"coordinates": [50.8503, 4.3517] 
+		}
+	},
+
+	"England": {
+		"Isleworth": {
+			"coordinates": [51.4671, 0.3290] 
+		},
+		"London": {
+			"coordinates": [51.5074, 0.1278] 
+		},
+
+		"Ramsgate": {
+			"coordinates": [51.3355, 1.4199] 
+		}
+	},
+
+	"France": {
+		"Arles": {
+			"coordinates": [43.6766, 4.6278] 
+		},
+		"Auvers-sur-Oise": {
+			"coordinates": [49.0709, 2.1708] 
+		},
+		"Paris": {
+			"coordinates": [48.8566, 2.3522] 
+		},
+		"Saint-Rémy": {
+			"coordinates": [43.7887, 4.8313] 
+		}
+	},
+
+	"Netherlands": {
+		"Amsterdam": {
+			"coordinates": [52.366667, 4.9]
+		},
+		"Dordrecht": {
+			"coordinates": [51.816667, 4.666667]
+		},
+		"Drenthe": {
+			"coordinates": [52.916667, 6.583333]
+		},
+		"Etten": {
+			"coordinates": [51.9158, 6.3388]
+		},
+		"The Hague": {
+			"coordinates": [52.0705, 4.3007]
+		},
+		"Nuenen": {
+			"coordinates": [51.4687, 5.5556]
+		},
+		"Tilburg": {
+			"coordinates": [51.5606, 5.0919]
+		},
+		"Zevenbergen": {
+			"coordinates": [51.6461, 4.6075]
+		},
+		"Zundert": {
+			"coordinates": [51.4707, 4.6624]
+		}
+	}
+}

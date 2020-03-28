@@ -24,6 +24,19 @@
     	<script src="https://unpkg.com/georaster-layer-for-leaflet/georaster-layer-for-leaflet.browserify.min.js"></script>
 
     	<script>
+
+    		function loadJSON(url, callback) {
+				var xobj = new XMLHttpRequest();
+				xobj.overrideMimeType("application/json");
+				xobj.open("GET", url, true);
+				xobj.onreadystatechange = function () {
+					if (xobj.readyState == 4 && xobj.status == 200) {
+						callback(JSON.parse(xobj.responseText));
+					}
+				}
+				xobj.send(null);
+			}
+
     		const scale = chroma.scale([
     			'#212238',
     			'#4e71b3',
@@ -32,6 +45,7 @@
     			'#bec075'
     			]).domain([0,50,150,225,255]);
     		var map = L.map('map').setView([51.57, 4.67], 6);
+
 
 
     		parseGeoraster("http://127.0.0.1:8080/b1.tif").then(georaster => {
@@ -62,7 +76,24 @@
 		        layer.addTo(map);
 	        });
 
+	        loadJSON("./locations.json", function(json) {
+	        	for (let country in json) {
+	        		const cities = json[country];
+	        		for (let city in cities) {
+	        			const point = cities[city].coordinates;
+		        		var flowerIcon = L.icon({
+						    iconUrl: 'real-sunflower.png',
+						    iconSize: [30,30], 
+						    popupAnchor:  [0,0]
+						});
+						const marker = L.marker(point, {icon: flowerIcon});
+						marker.bindPopup(city + "," + country);
+						marker.addTo(map);
+	        		}
 
+	        	}
+	        })
+		        
 
 
     	</script>
