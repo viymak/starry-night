@@ -57,9 +57,7 @@
     			maxBoundsViscosity: 1.0
     		});
 
-
-    		const url_b1 = (location.href + "/b1.tif").replace(/\/\//g, "/");
-    		parseGeoraster(url_b1).then(georaster => {
+    		parseGeoraster("https://raw.githubusercontent.com/viymak/starry-night/master/b1.tif").then(georaster => {
         		console.log("georaster:", georaster);
 
         		var layer = new GeoRasterLayer({
@@ -73,8 +71,7 @@
 		        layer.addTo(map);
 	        });
 
-    		const url_c1 = (location.href + "/c1.tif").replace(/\/\//g, "/");
-	        parseGeoraster(url_c1).then(georaster => {
+	        parseGeoraster("https://raw.githubusercontent.com/viymak/starry-night/master/c1.tif").then(georaster => {
         		console.log("georaster:", georaster);
 
         		var layer = new GeoRasterLayer({
